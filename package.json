@@ -1,0 +1,31 @@
+{
+  "name": "saucedemo-playwright-cucumber",
+  "version": "1.0.0",
+  "description": "Reto QA FrontEnd: suite automatizada de Sauce Demo con Playwright + Cucumber (Page Object Model)",
+  "private": true,
+  "scripts": {
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:login": "cucumber-js --tags @login",
+    "test:carrito": "cucumber-js --tags @carrito",
+    "test:compra": "cucumber-js --tags @compra",
+    "test:negativos": "cucumber-js --tags @negativo",
+    "test:headed": "cross-env HEADLESS=false SLOW_MO=300 cucumber-js",
+    "test:firefox": "cross-env BROWSER=firefox cucumber-js",
+    "test:webkit": "cross-env BROWSER=webkit cucumber-js",
+    "test:parallel": "cucumber-js --parallel 3",
+    "browsers:install": "playwright install chromium",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "13.3.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "22.20.5",
+    "cross-env": "10.1.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3"
+  }
+}
